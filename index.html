@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Jerson G&oacute;mez | Desarrollo de software</title>
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <script src="js/jquery.min.js"></script>
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="css/style-fonts.css" rel='stylesheet' type='text/css' />
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                });
+                $(".href").click(function (event) {
+                    event.preventDefault();
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                var pull = $('#pull');
+                menu = $('nav ul');
+                menuHeight = menu.height();
+                $(pull).on('click', function (e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+                $(window).resize(function () {
+                    var w = $(window).width();
+                    if (w > 320 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="home" class="header">
+            <div class="top-header">
+                <div class="container container-menu">
+                    <div class="logo">
+                        <a href="#"class="href">
+                            <!--<img src="images/photo.png" title="Jerson Gomez" />-->
+                        </a>
+                    </div>
+                    <nav class="top-nav">
+                        <ul class="top-nav">
+                            <li><a href="#home" class="scroll href">Inicio</a><span> </span></li>
+                            <li><a href="#about" class="scroll href">Acerca de mí</a></li>
+                            <li><a href="#services" class="scroll href">Servicios</a></li>
+                            <li><a href="#work" class="scroll href">Portafolio</a><span> </span></li>
+                            <li><a href="#contact" class="scroll href">Contacto</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <a href="#" id="pull" class="href"><img src="images/nav-icon.png" title="menu" /></a>
+                    </nav>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div id="home" class="home banner">
+            <div class="banner-info text-center">
+                <h1>Mi vida...  </h1><h1>mi libertad</h1>
+                <span>Mis pasiones en una sola imagen.</span>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div id="about" class="about">
+            <div class="about-head text-center">
+                <div class="container">
+                    <h2>Acerca de m&Iacute;</h2>
+                    <span></span>
+                    <div class="services-grids">
+                        <div class="col-md-12 photo-hijo">
+                            <div class="profile-style text-center"></div> 
+                        </div>
+                        <div class="col-md-12">
+                            <p>
+                                <label>Ingeniero de Sistemas <br/>(Desarrollador - E-commerce)</label><br/>
+                                Persona honesta, confiable, proactiva y creativa en lo que realizo, amante de la m&uacute;sica y apasionado por las motos. 
+                                Profesionalmente soy una persona responsable y con gran capacidad de autoaprendizaje, 
+                                dispuesta a asumir retos en los proyectos personales y empresariales.<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-grids text-center">
+                <div class="container">
+                    <div class="col-md-3 about-grid">
+                        <span class="light-icon"> </span>
+                        <h3><a href="#" class="href">Creativo</a></h3>
+                        <p></p>
+                        <label> </label>
+                    </div>
+                    <div class="col-md-3 about-grid">
+                        <span class="pen-icon"> </span>
+                        <h3><a href="#" class="href">Dedicado</a></h3>
+                        <p></p>
+                        <label> </label>
+                    </div>
+                    <div class="col-md-3 about-grid">
+                        <span class="cog-icon"> </span>
+                        <h3><a href="#" class="href">Responsable</a></h3>
+                        <p></p>
+                        <label> </label>
+                    </div>
+                    <div class="col-md-3 about-grid">
+                        <span class="mon-icon"> </span>
+                        <h3><a href="#" class="href">Autodidacta</a></h3>
+                        <p></p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div id="services" class="services">
+            <div class="services-grids">
+                <div class="col-md-6 services-grid-left">
+                    <div class="service-head">
+                        <h2>Servicios</h2>
+                        <span> </span>
+                        <p>
+                            Pongo a su disposici&oacute;n todos los conocimientos adquiridos a lo largo de mi labor c&oacute;mo 
+                            profesional para dar soluciones optimas a sus requerimientos y brindarle la mejor atenci&oacute;n.
+                        </p>
+                    </div>
+                    <div class="services-grid-left-grids">
+                        <div class="col-md-12 services-grid-left-grid text-center">
+                            <span> </span>
+                            <h3><a href="#" class="href">Desarrollo</a></h3>
+                            <p class="p-expand">
+                                Desarrollo web, Apps(Android - IOS) y sistemas de informaci&oacute;n a la medida con tecnologia responsive.
+                            </p>
+                        </div>
+                        <div class="col-md-7 services-grid-left-grid">
+                            <span class="chart"> </span>
+                            <h3><a href="#" class="href">An&aacute;lisis de Rendimiento</a></h3>
+                            <p>
+                                Optimizaci&oacute;n de c&oacute;digos fuente (Profiling) para dar un mejor rendimiento en las aplicaciones 
+                                realizadas e instaladas con el fin perfeccionar el manejo y funcionalidad de su empresa.
+                            </p>
+                        </div>
+                        <div class="col-md-5 services-grid-left-grid">
+                            <span class="clock"> </span>
+                            <h3><a href="#" class="href">Tiempos</a></h3>
+                            <p>
+                                Se garantiza entregas oportunas para que su empresa y/o negocio siempre este actualizado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 services-grid-right">
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div id="work" class="works">
+            <div class="conatiner">
+                <div class="works-head text-center">
+                    <h2>Portafolio</h2>
+                    <span> </span>
+                    <p>
+                        A continuaci&oacute;n encontraras una serie de trabajos realizados, en dónde se destaca la programaci&oacute;n web y dem&aacute;s 
+                        trabajos realizados a lo largo de mi carrera.    
+                    </p>
+                </div>
+            </div>
+            <div class="works-grids">
+                <div class="works-grid col-md-4">
+                    <img src="images/simetric.png" title="name" />
+                    <div class="caption">
+                        <h4>Simetric</h4>
+                        <p>Sistema de informaci&oacute;n para el manejo de CRC (Centros de reconocimiento de conductores).</p>
+                    </div>
+                </div>
+                <div class="works-grid col-md-4">
+                    <img src="images/decameron.png" title="name" class="decameron"/>
+                    <div class="caption">
+                        <h4>Hoteles Decameron</h4>
+                        <p>Web site www.decameron, proceso de cotizaci&oacute;n, registro y pago de reservas; Sistema de informaci&oacute;n Hodelineweb.</p>
+                    </div>
+                </div>
+                <div class="works-grid col-md-4">
+                    <img src="images/appfuture.png" title="name" />
+                    <div class="caption">
+                        <h4>App Future</h4>
+                        <p>Sistema encargado de la facturación para llanoGas.</p>
+                    </div>
+                </div>               
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="conatiner">
+            <div class="contact-head text-center">
+                <h2>Contacto</h2>
+                <span> </span>
+                <p>
+                    Tambi&eacute;n me pueden encontrar en redes sociales.
+                </p>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="col-md-12">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+
+                        <div class="col-md-4">
+                            <h3>
+                                <a href="https://es-la.facebook.com/jerson.s.urrego" target="_blank"><span class="icon-facebook man" title="Facebook"></span></a> 
+                            </h3>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>
+                                <a href="https://twitter.com/jersonGomez17" target="_blank"><span class="icon-twitter man" title="Twitter"></span></a>
+                            </h3>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>
+                                <a href="https://github.com/jersongomez" target="_blank"><span class="icon-github man" title="Skype"></span></a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h3>
+                            <span class="icon-bubble man" title="Whatsapp"></span> 
+                            304 381 5847
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right text-center">
+        <div class="container">
+            <p>Jerson Stivel Gómez Urrego</p>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $().UItoTop({easingType: 'easeOutQuart'});
+                });
+            </script>
+            <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        </div>
+    </div>
+</body>
+</html>
+
